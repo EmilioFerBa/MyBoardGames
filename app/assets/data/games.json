@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "Catan",
+        "minplayers": 3,
+        "maxplayers": 4,
+        "minplaytime": 60,
+        "maxplaytime": 120,
+        "categories": ["Estrategia", "Negociación"],
+        "image": "catan.jpg",
+        "galery": ["catan1.jpg", "catan2.jpg", "catan3.jpg"],
+        "longdescription": "Catan es un juego de mesa de estrategia y negociación en el que los jugadores compiten por colonizar una isla rica en recursos. Cada partida se desarrolla sobre un tablero modular que cambia en cada juego, lo que garantiza experiencias siempre diferentes. A lo largo de la partida, deberás recolectar materias primas para construir carreteras, asentamientos y ciudades. Sin embargo, no podrás conseguir todo por tu cuenta: el comercio y la negociación con otros jugadores son clave para progresar y adelantarte a tus rivales."
+    },
+    {
+        "id": 2,
+        "name": "Dungeons and Drinks",
+        "minplayers": 2,
+        "maxplayers": 6,
+        "minplaytime": 30,
+        "maxplaytime": 45,
+        "categories": ["Adulto", "Fiesta", "Juego de Cartas"],
+        "image": "Dungeons and Drinks.jpg",
+        "galery": ["Dungeons and Drinks1.jpg", "Dungeons and Drinks2.jpg", "Dungeons and Drinks3.jpg"],
+        "longdescription": "Dungeons and Drinks es un juego de mesa party que mezcla fantasía, humor y… bebidas. Inspirado en el espíritu de los juegos de rol clásicos, propone una aventura ligera y desenfadada en la que los jugadores se enfrentan a retos, monstruos y decisiones disparatadas mientras la diversión (y el caos) van en aumento. Durante la partida, los participantes asumen roles de fantasía y avanzan por una mazmorra superando pruebas, usando objetos y cumpliendo desafíos que a menudo implican beber o hacer que otros jugadores beban. La estrategia es sencilla, pero la interacción social y las situaciones imprevisibles son el verdadero centro de la experiencia."
+    },
+    {
+        "id": 3,
+        "name": "¡Aventureros al Tren! (Europa)",
+        "minplayers": 2,
+        "maxplayers": 5,
+        "minplaytime": 30,
+        "maxplaytime": 60,
+        "categories": ["Familiar", "Estrategia", "Competitivo"],
+        "image": "aventureros-al-tren-europa.jpg",
+        "galery": ["Aventureros al Tren Europa1.jpg", "Aventureros al Tren Europa2.jpg", "Aventureros al Tren Europa3.jpg"],
+        "longdescription": "¡Aventureros al Tren! Europa es un juego de mesa de estrategia accesible y familiar en el que los jugadores compiten por construir rutas ferroviarias a lo largo de un mapa. Durante la partida, deberás recolectar cartas de vagón para reclamar trayectos entre ciudades y completar tus billetes de destino, que otorgan puntos adicionales si logras conectar correctamente las rutas indicadas. Planificar tus caminos y adelantarte a los movimientos de los demás será clave para maximizar tu puntuación."
+    },
+    {
+        "id": 4,
+        "name": "exploding kittens",
+        "minplayers": 2,
+        "maxplayers": 5,
+        "minplaytime": 15,
+        "maxplaytime": 30,
+        "categories": ["Familiar", "Party", "Juego de Cartas", "Competitivo"],
+        "image": "exploding-kittens.jpg",
+        "galery": ["exploding-kittens1.jpg", "exploding-kittens2.jpg", "exploding-kittens3.jpg"],
+        "longdescription": "Exploding Kittens es un juego de cartas rápido y caótico en el que la suerte, la estrategia ligera y el sabotaje entre jugadores se combinan para crear partidas llenas de tensión y humor. El objetivo es simple: evita robar un gatito explosivo. En cada turno, los jugadores roban cartas del mazo mientras utilizan acciones para ver el futuro, saltarse turnos, obligar a otros a robar o desactivar las temidas explosiones. Si robas un Exploding Kitten y no puedes desactivarlo, quedas eliminado de la partida."
+    },
+    {
+        "id": 5,
+        "name": "The Island",
+        "minplayers": 2,
+        "maxplayers": 4,
+        "minplaytime": 45,
+        "maxplaytime": 60,
+        "categories": ["Familiar", "Estrategia", "Competitivo"],
+        "image": "the-island.jpg",
+        "galery": ["the-island1.jpg", "the-island2.jpg", "the-island3.jpg"],
+        "longdescription": "The Island es un juego de mesa de estrategia y supervivencia en el que los jugadores intentan rescatar a sus exploradores de una isla que se hunde poco a poco en el océano. Durante la partida, cada jugador mueve en secreto a sus exploradores hacia la seguridad de las islas cercanas utilizando balsas y nadando… mientras criaturas marinas como tiburones, ballenas y serpientes acechan en el agua. Al mismo tiempo, los jugadores pueden sabotear a sus rivales destruyendo rutas y provocando peligros para dificultar su huida."
+    },
+    {
+        "id": 6,
+        "name": "Sky Team",
+        "minplayers": 2, 
+        "maxplayers": 2, 
+        "minplaytime": 15,
+        "maxplaytime": 20,
+        "categories": ["Cooperativo", "Aviación", "Dados", "Juego para dos"],
+        "longdescription": "Sky Team es un juego de mesa cooperativo para dos jugadores en el que los participantes asumen los roles de piloto y copiloto para coordinar y aterrizar un avión con éxito. A lo largo de 21 escenarios y 11 aeropuertos reales, los jugadores deben asignar dados en silencio para equilibrar controles como velocidad, flaps, tren de aterrizaje y comunicación con la torre, enfrentándose a desafíos como viento o hielo. El juego destaca por su enfoque en la comunicación limitada, la tensión constante y una experiencia estratégica en equipo, con reglas sencillas y partidas rápidas de unos 15–20 minutos. Fue diseñado por Luc Rémond y ha recibido reconocimientos como el premio Spiel des Jahres 2024, consolidándose como uno de los mejores juegos cooperativos para dos jugadores.",
+        "image": "sky-team.jpg",
+        "galery": ["sky-team1.jpg", "sky-team2.jpg", "sky-team3.jpg"]
+    },
+    {
+        "id": 7,
+        "name": "Saboteur",
+        "minplayers": 2, 
+        "maxplayers": 12,
+        "minplaytime": 30,
+        "maxplaytime": 45,
+        "categories": ["Cartas", "Roles ocultos", "Minería", "Partida rápida"],
+        "longdescription": "Saboteur es un juego de cartas de roles ocultos en el que los jugadores asumen el papel de mineros que buscan oro, mientras algunos actúan secretamente como saboteadores que intentan impedirlo. Cada turno, los jugadores colocan cartas de túnel, usan herramientas para avanzar o bloquear a otros, o juegan cartas especiales que alteran la acción de los demás. El objetivo del juego es que los mineros consigan llegar al oro antes de que los saboteadores logren detenerlos. Con reglas sencillas y partidas rápidas de 30 a 45 minutos, Saboteur combina estrategia, engaño y deducción, siendo ideal para grupos que disfrutan de la interacción social y la tensión constante de descubrir aliados y traidores.",
+        "image": "saboteur.jpg",
+        "galery": ["saboteur1.jpg", "saboteur2.jpg", "saboteur3.jpg"]
+    }
+]

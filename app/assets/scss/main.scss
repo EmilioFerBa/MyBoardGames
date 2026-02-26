@@ -1,0 +1,20 @@
+@use "./hero";
+@use "./switch-buttons";
+@use "./filters";
+@use "./games";
+@use "./detailGame";
+@use "./range";
+
+.main{
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr auto 1fr;
+    min-height: 100dvh;
+    background-color: #F5F3EF;
+
+    .content{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 2rem;
+    }
+}

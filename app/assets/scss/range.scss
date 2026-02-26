@@ -1,0 +1,67 @@
+.range-slider {
+  -webkit-appearance: none;
+  width: 140px; // encaja con tu sidebar
+  height: 6px;
+  border-radius: 999px;
+  background: #d6d3d1; // gris cálido como tu UI
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  // progreso dinámico
+  background: linear-gradient(
+    to right,
+    #3f6f57 0%,
+    #3f6f57 var(--progress, 0%),
+    #d6d3d1 var(--progress, 0%),
+    #d6d3d1 100%
+  );
+
+  // hover suave
+  &:hover {
+    filter: brightness(0.98);
+  }
+
+  // THUMB Chrome / Edge / Safari
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #3f6f57; // tu verde
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+    transition: all 0.15s ease;
+
+    &:hover {
+      transform: scale(1.12);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.22);
+    }
+
+    &:active {
+      transform: scale(1.05);
+    }
+  }
+
+  // Firefox thumb
+  &::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #3f6f57;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  }
+
+  // Firefox track
+  &::-moz-range-track {
+    height: 6px;
+    border-radius: 999px;
+    background: transparent;
+  }
+
+  // focus accesible
+  &:focus-visible {
+    box-shadow: 0 0 0 3px rgba(63, 111, 87, 0.25);
+  }
+}

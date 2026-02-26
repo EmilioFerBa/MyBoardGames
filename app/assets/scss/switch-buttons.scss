@@ -1,0 +1,44 @@
+.switch{
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    padding-right: 1rem;
+    
+    input{
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    };
+    .slider{
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 34px;
+        width: 2rem;
+        height: 1rem;
+        margin-right: 0.4rem;
+    };
+    .slider:before{
+        position: absolute;
+        content: "";
+        height: 0.9rem;
+        width: 0.9rem;
+        left: 0.06rem;
+        bottom: 0.06rem;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+    };
+    input:checked + .slider{
+        background-color: #3A6B4F;
+    };
+    input:checked + .slider:before{
+        transform: translateX(0.9rem);
+    };
+}
