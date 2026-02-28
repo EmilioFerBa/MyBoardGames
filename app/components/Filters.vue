@@ -15,7 +15,7 @@
             <div>
                 <h3>Tipo de juego</h3>
                 <section id="GameTypeSection" class="options">
-                    <button v-for="option in gametype" :key="option" :value="option" @click="toggleGameTypeFilter(option)"
+                    <button v-for="option in gametype" :key="option" :value="option" @click="toggleGameTypeFilter(option); $event.target.blur()"
                     :class="{active: allFilters.gametype.includes(option)}">{{ option }}</button>
                 </section>
             </div>

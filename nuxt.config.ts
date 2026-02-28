@@ -13,6 +13,15 @@ export default defineNuxtConfig({
     preset: 'github_pages'
   },
   app: {
+    head: {
+      title: 'Mi Web de Juegos',
+      meta: [
+        { name: 'description', content: 'Web de juegos divertida' }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/logo-dados.png' }
+      ]
+    },
     baseURL: '/MyBoardGames/',
     buildAssetsDir: '_nuxt/' // 👈 MUY IMPORTANTE
   },

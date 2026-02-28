@@ -113,3 +113,16 @@
         }
     }
 }
+
+@media (max-width: 500px) {
+    #FiltersSection{
+        button:hover{
+            background-color: #d1d1d1;
+            color: black
+        }
+        button.active{
+            background-color: rgb(7, 102, 7);
+            color: white
+        }
+    }
+}
