@@ -4,8 +4,8 @@
             <h2>{{ game.name }}</h2>
             <img :src="`images/${game.image}`" :alt="game.name">
             <section class="info">
-                <span>{{ game.minplayers }} - {{ game.maxplayers }} jugadores</span>
-                <span>{{ game.minplaytime }} - {{ game.maxplaytime }} minutos</span>
+                <span>{{ game.minplayers }} - {{ game.maxplayers }} <Icon name="mdi:account-multiple"/></span>
+                <span>{{ game.minplaytime }} - {{ game.maxplaytime }} <Icon name="mdi:clock-outline"/></span>
             </section>
             <section>
                 <span class="categories" v-for="cat in game.categories" :key="cat">{{ cat }}</span>
@@ -26,28 +26,32 @@ export default {
         allFilters: {
             type: Object,
             required: true
+        },
+        filteredGames: {
+            type: Array,
+            default: () => []
+        },
+        randomGame: {
+            type: Number,
+            default: NaN
         }
     },
     data() {
         return {
-        games: gamesData,
-        detailsId: NaN
-        }
-    },
-    computed: {
-        filteredGames() {
-            return this.games.filter(game => {
-                const matchesPlayers = this.allFilters.players ? (game.minplayers <= parseInt(this.allFilters.players) && game.maxplayers >= parseInt(this.allFilters.players)) : true;
-                const matchesTime = this.allFilters.time && this.allFilters.time > 0 ? (parseInt(this.allFilters.time) >= game.maxplaytime || (game.minplaytime <= parseInt(this.allFilters.time) && game.maxplaytime >= parseInt(this.allFilters.time))) : true;
-                const matchesGameType = this.allFilters.gametype.length > 0 ? this.allFilters.gametype.some(type => game.categories.includes(type)) : true;
-                return matchesPlayers && matchesTime && matchesGameType;
-            });
+            detailsId: NaN
         }
     },
     methods: {
         showGame(id) {
             this.detailsId = id;
             document.getElementById('GameDetail').showModal();
+        }
+    },
+    watch: {
+        randomGame(newVal) {
+            if (!isNaN(newVal)) {
+                this.showGame(newVal);
+            }
         }
     }
 }

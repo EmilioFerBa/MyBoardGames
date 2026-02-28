@@ -1,14 +1,18 @@
 <template>
     <dialog id="GameDetail" closedby="any" >
         <div class="modal-content" v-if="selectedGame">
+            <form method="dialog">
+                <button class="close-button"><Icon class="close-icon" name="mdi:close-circle-outline"/></button>
+            </form>
+            
             <section id="headerModal">
                 <h1>{{ selectedGame.name }}</h1>
                 <img :src="`images/${selectedGame.image}`" :alt="selectedGame.name">
             </section>
             <section>
                 <div class="info">
-                    <span>{{ selectedGame.minplayers }} - {{ selectedGame.maxplayers }} jugadores</span>
-                    <span>{{ selectedGame.minplaytime }} - {{ selectedGame.maxplaytime }} minutos</span>
+                    <span>{{ selectedGame.minplayers }} - {{ selectedGame.maxplayers }} <Icon name="mdi:account-multiple"/></span>
+                    <span>{{ selectedGame.minplaytime }} - {{ selectedGame.maxplaytime }} <Icon name="mdi:clock-outline"/></span>
                 </div>
                 <section >
                     <span class="categories" v-for="cat in selectedGame.categories" :key="cat">{{ cat }}</span>

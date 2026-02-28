@@ -1,29 +1,25 @@
 <template>
     <div id="FiltersSection">
-        <section id="playersSection">
-            <h3>Número de jugadores: {{ allFilters.players }}</h3>
-            <input type="number" name="players" id="playersInput" placeholder="¿Cuántos jugadores sois?" v-model="allFilters.players">
-            <h3>Duración</h3>
-            <section id="timeSection">
-                <input type="range" min="0" max="120" step="15" class="range-slider" v-model="allFilters.time"
-                       :style="{'--progress': (allFilters.time / 120) * 100 + '%'}"> {{ allFilters.time }} min 
-                <!--<button v-for="option in timeOptions" :key="option" :value="option" @click="toggleTimeFilter(option)" :class="{active: allFilters.time.includes(option)}">{{ option }}</button>
-                <label class="switch" v-for="option in timeOptions" :key="option" :value="option">
-                    <input type="checkbox" name="time" :id="option">
-                    <span class="slider"></span>
-                    <span class="label-text">{{ option }}</span>
-                </label>-->
-            </section>
-            <h3>Tipo de juego</h3>
-            <section id="GameTypeSection" class="options">
-                <button v-for="option in gametype" :key="option" :value="option" @click="toggleGameTypeFilter(option)"
-                 :class="{active: allFilters.gametype.includes(option)}">{{ option }}</button>
-                <!--<label class="switch" v-for="option in gametype" :key="option" :value="option">
-                    <input type="checkbox" name="gametype" :id="option">
-                    <span class="slider"></span>
-                    <span class="label-text">{{ option }}</span>
-                </label>-->
-            </section>
+        <section class="filter-content">
+            <div>
+                <h3 class="filter-title">Número de jugadores: {{ allFilters.players }}</h3>
+                <input type="number" name="players" id="playersInput" placeholder="¿Cuántos jugadores sois?" v-model="allFilters.players">
+            </div>
+            <div id="timeFilter">
+                <h3 class="filter-title">Duración: {{ allFilters.time }} min</h3>
+                <section id="timeSection">
+                    <input type="range" min="0" max="120" step="15" class="range-slider" v-model="allFilters.time"
+                        :style="{'--progress': (allFilters.time / 120) * 100 + '%'}"> 
+                </section>
+            </div>
+            <div>
+                <h3>Tipo de juego</h3>
+                <section id="GameTypeSection" class="options">
+                    <button v-for="option in gametype" :key="option" :value="option" @click="toggleGameTypeFilter(option)"
+                    :class="{active: allFilters.gametype.includes(option)}">{{ option }}</button>
+                </section>
+            </div>
+            
             
         </section>
     </div>

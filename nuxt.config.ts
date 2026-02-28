@@ -3,12 +3,20 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: ['@nuxt/content', '@nuxt/image', '@nuxt/icon'],
+  icon: {
+    mode: 'css',
+    cssLayer: 'base'
+  },
   css: ['@/assets/scss/main.scss'],
   ssr: false, // obligatorio para GitHub Pages
   nitro: {
     preset: 'github_pages'
   },
   app: {
-    baseURL: '/MyBoardGames/' // 👈 MUY IMPORTANTE
+    baseURL: '/MyBoardGames/',
+    buildAssetsDir: '_nuxt/' // 👈 MUY IMPORTANTE
+  },
+  routeRules: {
+    '/**': { prerender: true }
   }
 })

@@ -37,7 +37,7 @@
     },
     {
         "id": 4,
-        "name": "exploding kittens",
+        "name": "Exploding Kittens",
         "minplayers": 2,
         "maxplayers": 5,
         "minplaytime": 15,
