@@ -4,8 +4,8 @@
             <h2>{{ game.name }}</h2>
             <img :src="`images/${game.image}`" :alt="game.name">
             <section class="info">
-                <span>{{ game.minplayers }} - {{ game.maxplayers }} <Icon name="mdi:account-multiple"/></span>
-                <span>{{ game.minplaytime }} - {{ game.maxplaytime }} <Icon name="mdi:clock-outline"/></span>
+                <span>{{ getPlayers(game) }} <Icon name="mdi:account-multiple"/></span>
+                <span>{{ getTime(game) }} <Icon name="mdi:clock-outline"/></span>
             </section>
             <section>
                 <span class="categories" v-for="cat in game.categories" :key="cat">{{ cat }}</span>
@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import gamesData from '../assets/data/games.json'
 import GameDetail from './gameDetail.vue'
 
 export default {
@@ -42,6 +41,18 @@ export default {
         }
     },
     methods: {
+        getPlayers(game) {
+            if (game.minplayers === game.maxplayers) {
+                return `${game.minplayers}`;
+            }
+            return `${game.minplayers}-${game.maxplayers}`;
+        },
+        getTime(game) {
+            if (game.minplaytime === game.maxplaytime) {
+                return `${game.minplaytime}`;
+            }
+            return `${game.minplaytime}-${game.maxplaytime}`;
+        },
         showGame(id) {
             this.detailsId = id;
             document.getElementById('GameDetail').showModal();

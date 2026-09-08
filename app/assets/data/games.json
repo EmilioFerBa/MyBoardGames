@@ -30,7 +30,7 @@
         "maxplayers": 5,
         "minplaytime": 30,
         "maxplaytime": 60,
-        "categories": ["Familiar", "Estrategia", "Competitivo"],
+        "categories": ["Familiar", "Estrategia"],
         "image": "aventureros-al-tren-europa.jpg",
         "galery": ["Aventureros al Tren Europa1.jpg", "Aventureros al Tren Europa2.jpg", "Aventureros al Tren Europa3.jpg"],
         "longdescription": "¡Aventureros al Tren! Europa es un juego de mesa de estrategia accesible y familiar en el que los jugadores compiten por construir rutas ferroviarias a lo largo de un mapa. Durante la partida, deberás recolectar cartas de vagón para reclamar trayectos entre ciudades y completar tus billetes de destino, que otorgan puntos adicionales si logras conectar correctamente las rutas indicadas. Planificar tus caminos y adelantarte a los movimientos de los demás será clave para maximizar tu puntuación."
@@ -42,7 +42,7 @@
         "maxplayers": 5,
         "minplaytime": 15,
         "maxplaytime": 30,
-        "categories": ["Familiar", "Party", "Juego de Cartas", "Competitivo"],
+        "categories": ["Familiar", "Party", "Juego de Cartas"],
         "image": "exploding-kittens.jpg",
         "galery": ["exploding-kittens1.jpg", "exploding-kittens2.jpg", "exploding-kittens3.jpg"],
         "longdescription": "Exploding Kittens es un juego de cartas rápido y caótico en el que la suerte, la estrategia ligera y el sabotaje entre jugadores se combinan para crear partidas llenas de tensión y humor. El objetivo es simple: evita robar un gatito explosivo. En cada turno, los jugadores roban cartas del mazo mientras utilizan acciones para ver el futuro, saltarse turnos, obligar a otros a robar o desactivar las temidas explosiones. Si robas un Exploding Kitten y no puedes desactivarlo, quedas eliminado de la partida."
@@ -54,7 +54,7 @@
         "maxplayers": 4,
         "minplaytime": 45,
         "maxplaytime": 60,
-        "categories": ["Familiar", "Estrategia", "Competitivo"],
+        "categories": ["Familiar", "Estrategia"],
         "image": "the-island.jpg",
         "galery": ["the-island1.jpg", "the-island2.jpg", "the-island3.jpg"],
         "longdescription": "The Island es un juego de mesa de estrategia y supervivencia en el que los jugadores intentan rescatar a sus exploradores de una isla que se hunde poco a poco en el océano. Durante la partida, cada jugador mueve en secreto a sus exploradores hacia la seguridad de las islas cercanas utilizando balsas y nadando… mientras criaturas marinas como tiburones, ballenas y serpientes acechan en el agua. Al mismo tiempo, los jugadores pueden sabotear a sus rivales destruyendo rutas y provocando peligros para dificultar su huida."
@@ -66,7 +66,7 @@
         "maxplayers": 2, 
         "minplaytime": 15,
         "maxplaytime": 20,
-        "categories": ["Cooperativo", "Aviación", "Dados", "Juego para dos"],
+        "categories": ["Por equipos", "Dados", "Juego para dos", "Cooperativo"],
         "longdescription": "Sky Team es un juego de mesa cooperativo para dos jugadores en el que los participantes asumen los roles de piloto y copiloto para coordinar y aterrizar un avión con éxito. A lo largo de 21 escenarios y 11 aeropuertos reales, los jugadores deben asignar dados en silencio para equilibrar controles como velocidad, flaps, tren de aterrizaje y comunicación con la torre, enfrentándose a desafíos como viento o hielo. El juego destaca por su enfoque en la comunicación limitada, la tensión constante y una experiencia estratégica en equipo, con reglas sencillas y partidas rápidas de unos 15–20 minutos. Fue diseñado por Luc Rémond y ha recibido reconocimientos como el premio Spiel des Jahres 2024, consolidándose como uno de los mejores juegos cooperativos para dos jugadores.",
         "image": "sky-team.jpg",
         "galery": ["sky-team1.jpg", "sky-team2.jpg", "sky-team3.jpg"]
@@ -78,9 +78,45 @@
         "maxplayers": 12,
         "minplaytime": 30,
         "maxplaytime": 45,
-        "categories": ["Cartas", "Roles ocultos", "Minería", "Partida rápida"],
+        "categories": ["Cartas", "Roles ocultos"],
         "longdescription": "Saboteur es un juego de cartas de roles ocultos en el que los jugadores asumen el papel de mineros que buscan oro, mientras algunos actúan secretamente como saboteadores que intentan impedirlo. Cada turno, los jugadores colocan cartas de túnel, usan herramientas para avanzar o bloquear a otros, o juegan cartas especiales que alteran la acción de los demás. El objetivo del juego es que los mineros consigan llegar al oro antes de que los saboteadores logren detenerlos. Con reglas sencillas y partidas rápidas de 30 a 45 minutos, Saboteur combina estrategia, engaño y deducción, siendo ideal para grupos que disfrutan de la interacción social y la tensión constante de descubrir aliados y traidores.",
         "image": "saboteur.jpg",
         "galery": ["saboteur1.jpg", "saboteur2.jpg", "saboteur3.jpg"]
+    },
+    {
+        "id": 8,
+        "name": "¡Paren la nave! Que me bajo",
+        "minplayers": 2, 
+        "maxplayers": 8,
+        "minplaytime": 30,
+        "maxplaytime": 30,
+        "categories": ["Familiar", "Party", "Preguntas"],
+        "longdescription": "¡Paren la Nave! Que me bajo es un juego de mesa para toda la familia en el que, a diferencia de otros juegos del tipo de “preguntas y respuestas”, no necesitarás acertar la pregunta para ganar unos buenos puntos… solo tendrás que acercarte a la respuesta correcta. ¿Cuántas judías hay en una lata de judías? ¿Cuánto tiempo duró el beso más largo? Pues de eso va este juego, de un montonazo de preguntas con respuestas numéricas. Números a los que te tendrás que aproximar lo máximo posible si quieres hacerte con la victoria. Prepárate para pasarlo en grande con preguntas de todo tipo y temas, desde perritos calientes, hasta el mismísimo Harry Potter… ¡y lo mejor es que no te tienes que saber la respuesta!",
+        "image": "paren-la-nave-que-me-bajo.jpg",
+        "galery": ["paren-la-nave-que-me-bajo1.jpg", "paren-la-nave-que-me-bajo2.jpg", "paren-la-nave-que-me-bajo3.jpg"]
+    },
+    {
+        "id": 9,
+        "name": "Port Royal: Big Box",
+        "minplayers": 1, 
+        "maxplayers": 5,
+        "minplaytime": 15,
+        "maxplaytime": 45,
+        "categories": ["Cartas", "Estrategia", "Familiar"],
+        "longdescription": "Port Royal es un divertido y tenso Juego de Cartas con Temática de Piratas en el que cada Jugador busca convertirse en el Pirata más rico de todos los Mares. Es un Juego de Reglas muy sencillas e intuitivas, perfecto para disfrutar en Familia o con Amigos. Durante la partida tendrás que arriesgar para ir robando Cartas del Mazo y saquear la mayor cantidad de Barcos que puedas... pero sin pasarte. Si demuestras ser demasiado codicioso, es posible que te quedes sin Botín... ¡pero si no lo haces no conseguirás superar al resto de Bucaneros!.",
+        "image": "port-royal-big-box.jpg",
+        "galery": ["port-royal-big-box1.jpg", "port-royal-big-box2.jpg", "port-royal-big-box3.jpg"]
+    },
+    {
+        "id": 10,
+        "name": "20 Segundos al Límite",
+        "minplayers": 5, 
+        "maxplayers": 20,
+        "minplaytime": 20,
+        "maxplaytime": 20,
+        "categories": ["Cartas", "Por equipos", "Familiar"],
+        "longdescription": "Compra 20 Segundos al Límite, el juego de mesa donde la vergüenza no tiene cabida y las risas son obligatorias. Dos equipos, un montón de desafíos ridículos y un reloj de arena que pone de los nervios. El objetivo es claro: superar el reto antes de que caiga la arena. Pero no te confíes… este reloj no solo cuenta el tiempo, ¡también hace ruido! Y sí, ese sonido te saca de tus casillas. Cuando tu equipo lo da todo, el otro espera su turno para vengarse… y así, entre locuras y desafíos, vais sumando puntos y carcajadas.",
+        "image": "20-segundos-al-límite.jpg",
+        "galery": ["20-segundos-al-límite1.jpg", "20-segundos-al-límite2.jpg", "20-segundos-al-límite3.jpg"]
     }
 ]

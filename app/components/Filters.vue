@@ -19,6 +19,15 @@
                     :class="{active: allFilters.gametype.includes(option)}">{{ option }}</button>
                 </section>
             </div>
+            <div>
+                <h3>Ordenación <button @click="toggleTypeOrder(); $event.target.blur()" :class="{active: allFilters.typeOrder === 'asc'}">
+                        {{ allFilters.typeOrder === 'asc' ? 'Ascendente' : 'Descendente' }}</button></h3>
+                <section id="OrderSection" class="options">
+                    <button v-for="option, value in orderByOptions" :key="value" :value="value" @click="setOrderBy(value); $event.target.blur()"
+                    :class="{active: allFilters.orderBy === value}">{{ option }}</button>
+                    
+                </section>
+            </div>
             
             
         </section>
@@ -38,6 +47,10 @@ export default {
             playersOptions: ['2-3', '4-5', '6+'],
             timeOptions: ['0-30 min', '30-60 min', '60+ min'],
             gametype: ['Cooperativo', 'Competitivo', 'Familiar', 'Estrategia', 'Party', 'Abstracto', "Juego de Cartas"],
+            orderByOptions: {'minplaytime': 'Tiempo mínimo',
+                             'maxplaytime': 'Tiempo máximo',
+                             'minplayers': 'Jugadores mínimos',
+                             'maxplayers': 'Jugadores máximos'}
         }
     },
     methods: {
@@ -47,7 +60,12 @@ export default {
                 return;
             }
             this.allFilters.gametype.push(option);
-            console.log(`Filtro de tipo de juego seleccionado: ${option}`);
+        },
+        toggleTypeOrder() {
+            this.allFilters.typeOrder = this.allFilters.typeOrder === 'asc' ? 'desc' : 'asc';
+        },
+        setOrderBy(value) {
+            this.allFilters.orderBy = this.allFilters.orderBy === value ? '' : value;
         }
     }
 }
