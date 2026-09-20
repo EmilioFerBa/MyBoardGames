@@ -7,12 +7,14 @@
             
             <section id="headerModal">
                 <h1>{{ selectedGame.name }}</h1>
-                <img :src="`images/${selectedGame.image}`" :alt="selectedGame.name">
+                <div ref="slider" class="slider">
+                    <img v-for="image in images" :key="image" :src="`images/${selectedGame.name}/${image}`" :alt="selectedGame.name">
+                </div>
             </section>
             <section>
                 <div class="info">
-                    <span>{{ selectedGame.minplayers }} - {{ selectedGame.maxplayers }} <Icon name="mdi:account-multiple"/></span>
-                    <span>{{ selectedGame.minplaytime }} - {{ selectedGame.maxplaytime }} <Icon name="mdi:clock-outline"/></span>
+                    <span>{{ totalPlayers }} <Icon name="mdi:account-multiple"/></span>
+                    <span>{{ totalPlaytimes }} <Icon name="mdi:clock-outline"/></span>
                 </div>
                 <section >
                     <span class="categories" v-for="cat in selectedGame.categories" :key="cat">{{ cat }}</span>
@@ -32,9 +34,9 @@
 import gamesData from '../assets/data/games.json'
 export default {
     props: {
-        gameId: {
-            type: Number,
-            default: 1
+        selectedGame: {
+            type: Object,
+            default: () => ({})
         }
     },
     data() {
@@ -44,9 +46,33 @@ export default {
         }
     },
     computed: {
-        selectedGame() {
-            return this.games.find(game => game.id === this.gameId);
+        hasSelectedGame() {
+            return Object.keys(this.selectedGame).length > 0;
+        },
+        images() {
+            return this.hasSelectedGame ? [this.selectedGame.image, ...this.selectedGame.galery] : [];
+        },
+        totalPlayers() {
+            if (this.selectedGame.minplayers === this.selectedGame.maxplayers) {
+                return this.selectedGame.minplayers;
+            }
+            return this.hasSelectedGame ? `${this.selectedGame.minplayers} - ${this.selectedGame.maxplayers}` : '';
+        },
+        totalPlaytimes() {
+            if (this.selectedGame.minplaytime === this.selectedGame.maxplaytime) {
+                return this.selectedGame.minplaytime;
+            } 
+            return this.hasSelectedGame ? `${this.selectedGame.minplaytime} - ${this.selectedGame.maxplaytime}` : '';
         }
-    }
+    },
+    watch: {
+        selectedGame() {
+            this.$nextTick(() => {
+                if (this.$refs.slider) {
+                    this.$refs.slider.scrollLeft = 0
+                }
+            })
+        }
+    },
 }
 </script>

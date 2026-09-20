@@ -15,7 +15,7 @@
             <div>
                 <h3>Tipo de juego</h3>
                 <section id="GameTypeSection" class="options">
-                    <button v-for="option in gametype" :key="option" :value="option" @click="toggleGameTypeFilter(option); $event.target.blur()"
+                    <button v-for="option in categories" :key="option" :value="option" @click="toggleGameTypeFilter(option); $event.target.blur()"
                     :class="{active: allFilters.gametype.includes(option)}">{{ option }}</button>
                 </section>
             </div>
@@ -40,13 +40,16 @@ export default {
         allFilters: {
             type: Object,
             required: true
+        },
+        categories: {
+            type: Array,
+            default: () => []
         }
     },
     data() {
         return {
             playersOptions: ['2-3', '4-5', '6+'],
             timeOptions: ['0-30 min', '30-60 min', '60+ min'],
-            gametype: ['Cooperativo', 'Competitivo', 'Familiar', 'Estrategia', 'Party', 'Abstracto', "Juego de Cartas"],
             orderByOptions: {'minplaytime': 'Tiempo mínimo',
                              'maxplaytime': 'Tiempo máximo',
                              'minplayers': 'Jugadores mínimos',

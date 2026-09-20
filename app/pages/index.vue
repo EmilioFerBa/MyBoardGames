@@ -2,7 +2,7 @@
     <div class="main">
         <Hero :filteredGames="filteredGames" @randomGame="showGameDetails"/>
         <div class="content">
-            <Filters :allFilters="allFilters"/>
+            <Filters :allFilters="allFilters" :categories="categories" />
             <Games :allFilters="allFilters" :filteredGames="filteredGames" :randomGame="randomGame"/>
         </div>
     </div>
@@ -29,6 +29,15 @@ export default {
         }
     },
     computed: {
+        categories() {
+            const categoriesSet = new Set();
+            this.gamesData.forEach(game => {
+                game.categories.forEach(category => {
+                    categoriesSet.add(category);
+                });
+            });
+            return Array.from(categoriesSet);
+        },
         filteredGames() {
             const  filtered = this.gamesData.filter(game => {
                 const matchesPlayers = this.allFilters.players ? (game.minplayers <= parseInt(this.allFilters.players) && game.maxplayers >= parseInt(this.allFilters.players)) : true;
