@@ -3,7 +3,7 @@ dialog{
     border-radius: 12px;     /* opcional, para que no se salga de la pantalla */
     overflow-y: auto;
     max-height: 80%;
-    max-width: 40%;
+    max-width: 70%;
     h1{
         text-align: center;
         margin-bottom: 0.3rem;
@@ -78,7 +78,7 @@ dialog::backdrop{
 
 @media (max-width: 900px) {
     dialog{
-        width: 70%;
+        max-width: 70%;
         p{
             font-size: 1rem;
             max-width: 60dvw;
