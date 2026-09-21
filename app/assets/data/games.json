@@ -183,7 +183,7 @@
         "id": "16",
         "name": "Villainous",
         "minplayers": 2,
-        "maxplayers": 4,
+        "maxplayers": 6,
         "minplaytime": 20,
         "maxplaytime": 30,
         "categories": ["Familiar", "Estrategia", "Cartas"],
