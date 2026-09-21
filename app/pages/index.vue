@@ -30,8 +30,9 @@ export default {
     },
     computed: {
         categories() {
+            const games = this.filteredGames ? this.filteredGames : this.gamesData;
             const categoriesSet = new Set();
-            this.gamesData.forEach(game => {
+            games.forEach(game => {
                 game.categories.forEach(category => {
                     categoriesSet.add(category);
                 });
@@ -42,7 +43,7 @@ export default {
             const  filtered = this.gamesData.filter(game => {
                 const matchesPlayers = this.allFilters.players ? (game.minplayers <= parseInt(this.allFilters.players) && game.maxplayers >= parseInt(this.allFilters.players)) : true;
                 const matchesTime = this.allFilters.time && this.allFilters.time > 0 ? parseInt(this.allFilters.time) >= game.maxplaytime : true;
-                const matchesGameType = this.allFilters.gametype.length > 0 ? this.allFilters.gametype.some(type => game.categories.includes(type)) : true;
+                const matchesGameType = this.allFilters.gametype.length > 0 ? this.allFilters.gametype.every(type => game.categories.includes(type)) : true;
                 return matchesPlayers && matchesTime && matchesGameType;
             })
             if(this.allFilters.orderBy) {

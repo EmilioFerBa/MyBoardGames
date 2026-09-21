@@ -1,19 +1,23 @@
 <template>
-    <div id="GameSection">
-        <div class="game-card" v-for="game in filteredGames " :key="game.id" @click="showGame(game.id)">
-            <h2>{{ game.name }}</h2>
-            <img :src="`images/${game.name}/${game.image}`" :alt="game.name">
-            <section class="info">
-                <span>{{ getPlayers(game) }} <Icon name="mdi:account-multiple"/></span>
-                <span>{{ getTime(game) }} <Icon name="mdi:clock-outline"/></span>
-            </section>
-            <section>
-                <span class="categories" v-for="cat in game.categories" :key="cat">{{ cat }}</span>
-            </section>
-            <p class="short-description">{{ game.longdescription }}</p>
+    <div>
+        <h1>Total Juegos: {{ filteredGames.length }}</h1>
+        <div id="GameSection">
+            <div class="game-card" v-for="game in filteredGames " :key="game.id" @click="showGame(game.id)">
+                <h2>{{ game.name }}</h2>
+                <img :src="`images/${game.name}/${game.image}`" :alt="game.name">
+                <section class="info">
+                    <span>{{ getPlayers(game) }} <Icon name="mdi:account-multiple"/></span>
+                    <span>{{ getTime(game) }} <Icon name="mdi:clock-outline"/></span>
+                </section>
+                <section>
+                    <span class="categories" v-for="cat in game.categories" :key="cat">{{ cat }}</span>
+                </section>
+                <p class="short-description">{{ game.longdescription }}</p>
+            </div>
+            <game-detail v-if="selectedGame" :selectedGame="selectedGame" ref="GameDetail"/>
         </div>
-        <game-detail v-if="selectedGame" :selectedGame="selectedGame" ref="GameDetail"/>
     </div>
+    
 </template>
 
 <script>
